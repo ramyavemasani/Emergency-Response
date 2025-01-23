@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Response System</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>Emergency Response System</h1>
+    <p>Connecting Police, Hospitals, and NGOs for immediate help</p>
+  </header>
+
+  <div id="important-message">
+    <p><strong>Important:</strong> In case of an emergency, please contact the relevant authorities immediately. Use this system to find quick assistance.</p>
+    <button onclick="closeImportantMessage()">Got it</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('police')">Police</a></li>
+      <li><a href="#" onclick="showSection('hospitals')">Hospitals</a></li>
+      <li><a href="#" onclick="showSection('ngos')">NGOs</a></li>
+    </ul>
+  </nav>
+
+  <div class="image-container">
+    <section id="police" class="content-section active">
+      <h2>Police</h2>
+      <p>Find contact details of local police stations for emergency situations.</p>
+      <p><strong>Details:</strong> Local police stations are responsible for maintaining law and order in the community. They provide immediate assistance in case of crimes, accidents, or public disturbances. You can report incidents, seek protection, or get help during emergencies by contacting your nearest station.</p>
+      <p>After clicking on the <strong>'Contact'</strong> button, users will be prompted to fill out a form with their contact details and precise location. Once the form is completed, clicking on the <strong>'Submit'</strong> button will finalize their request.</p>
+      <a href="police.html">Contact Police</a>
+    </section>
+
+    <section id="hospitals" class="content-section">
+      <h2>Hospitals</h2>
+      <p>Get information on nearby hospitals for medical emergencies.</p>
+      <p><strong>Details:</strong> Hospitals offer emergency medical care for accidents, injuries, and illnesses. They provide specialized treatments, ambulance services, and round-the-clock support to handle critical situations effectively. Ensure you know the nearest hospital's contact details for quick access.</p>
+      <p>After clicking on the <strong>'Contact'</strong> button, users will be prompted to fill out a form with their contact details and precise location. Once the form is completed, clicking on the <strong>'Submit'</strong> button will finalize their request.</p>
+      <a href="hospital.html">Contact Hospitals</a>
+    </section>
+
+    <section id="ngos" class="content-section">
+      <h2>NGOs</h2>
+      <p>Reach out to NGOs for additional support during crises.</p>
+      <p><strong>Details:</strong> NGOs play a vital role in disaster relief, community support, and social services. They provide resources, shelter, food, and emotional support to individuals and families in need. Partnering with NGOs ensures additional help during emergencies.</p>
+      <p>After clicking on the <strong>'Contact'</strong> button, users will be prompted to fill out a form with their contact details and precise location. Once the form is completed, clicking on the <strong>'Submit'</strong> button will finalize their request.</p>
+      <a href="NGO.html">Contact NGOs</a>
+
+    </section>
+
+  <footer>
+    <p>&copy; 2025 Emergency Management</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach((section) => {
+        section.classList.remove('active');
+        if (section.id === sectionId) {
+          section.classList.add('active');
+        }
+      });
+    }
+
+    function closeImportantMessage() {
+      const message = document.getElementById('important-message');
+      message.classList.add('hidden');
+      setTimeout(() => message.style.display = 'none', 500);
+    }
+  </script>
+</body>
+</html>
