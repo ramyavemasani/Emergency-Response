@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Response System</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
   <header>
@@ -17,17 +16,51 @@
     <p><strong>Important:</strong> In case of an emergency, please contact the relevant authorities immediately. Use this system to find quick assistance.</p>
     <button onclick="closeImportantMessage()">Got it</button>
   </div>
-
-  <nav>
+  <nav class="nav-1">
     <ul>
-      <li><a href="#" onclick="showSection('police')">Police</a></li>
-      <li><a href="#" onclick="showSection('hospitals')">Hospitals</a></li>
-      <li><a href="#" onclick="showSection('ngos')">NGOs</a></li>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('services')">Services</a></li>
     </ul>
   </nav>
-
   <div class="image-container">
-    <section id="police" class="content-section active">
+    <section id="services" class="content-section">
+      <nav class="nav-2">
+        <ul>
+          <li><a href="#" onclick="showSection('police')">Police 👮</a></li>
+          <li><a href="#" onclick="showSection('hospitals')">Hospitals 👨‍⚕️</a></li>
+          <li><a href="#" onclick="showSection('ngos')">NGOs 💂</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section id="home" class="content-section  active">
+      <p><h2>Welcome to the Emergency Response System</h2>
+        <p>
+          This system is designed to provide you with immediate access to critical emergency services. 
+          You can connect with local Police, Hospitals, or NGOs in just a few steps. 
+          To get started, click on the <strong>Services</strong> option in the navigation bar above. 
+          Once on the Services page, you'll find three options: Police, Hospitals, and NGOs. 
+          Click on the desired option based on the type of emergency you are facing. 
+        </p>
+        <p>
+          For example, select Police for reporting crimes or accidents, Hospitals for medical emergencies, 
+          or NGOs for disaster relief or community support. 
+          After selecting an option, you'll be guided to fill out a form with your contact details and location. 
+          Once the form is submitted, you'll be directed to a map where you can find the nearest service provider. 
+          This ensures quick and effective assistance tailored to your specific needs. 
+          Use this platform responsibly to save valuable time during emergencies.
+        </p>
+        <p>
+          Local police stations are responsible for maintaining law and order in the community. They provide immediate assistance in case of crimes, accidents, or public disturbances. You can report incidents, seek protection, or get help during emergencies by contacting your nearest station.
+        </p>
+        <p>
+          Hospitals offer emergency medical care for accidents, injuries, and illnesses. They provide specialized treatments, ambulance services, and round-the-clock support to handle critical situations effectively. Ensure you know the nearest hospital's contact details for quick access.
+        </p>
+        <p>
+          NGOs play a vital role in disaster relief, community support, and social services. They provide resources, shelter, food, and emotional support to individuals and families in need. Partnering with NGOs ensures additional help during emergencies.
+        </p>
+      </p>
+    </section>
+    <section id="police" class="content-section">
       <h2>Police</h2>
       <p>Find contact details of local police stations for emergency situations.</p>
       <p><strong>Details:</strong> Local police stations are responsible for maintaining law and order in the community. They provide immediate assistance in case of crimes, accidents, or public disturbances. You can report incidents, seek protection, or get help during emergencies by contacting your nearest station.</p>
@@ -73,5 +106,6 @@
       setTimeout(() => message.style.display = 'none', 500);
     }
   </script>
+
 </body>
 </html>
