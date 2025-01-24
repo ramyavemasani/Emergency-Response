@@ -24,8 +24,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  nav {
+  .nav-1 {
     background-color: #0056b3;
+    padding: 10px 0;
+  }
+  .nav-2{
     padding: 10px 0;
   }
 
@@ -84,7 +87,7 @@
   }
 
   .image-container a {
-    background-color: #007bff;
+    background-color: #0056b3;
     color: white;
     border: none;
     padding: 10px 20px;
